@@ -1,0 +1,60 @@
+<html>
+<title>W3CSS NAVIGATION</title> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3css/w3.css"> 
+<body class="w3-green">
+<div class="w3-sidebar w3-bar-block w3-orange w3-card" style="width:130px;"> 
+<h5 class="w3-bar-item w3-green">MENU</h5>
+<button class="w3-bar-item w3-button tablink" onclick="openmenu(event, 'motor')">Motor</button>
+ <button class="w3-bar-item w3-button tablink" onclick="openmenu(event, 'sepeda')">Sepeda</button> 
+<button class="w3-bar-item w3-button tablink" onclick="openmenu(event, 'kampus')">Kampus</button> 
+<button class="w3-bar-item w3-button tablink" onclick="openmenu(event, 'paul')">Paul Walker</button> 
+<button class="w3-bar-item w3-button tablink" onclick="openmenu(event, 'profile')">Profile</button> 
+</div>
+<div style="margin-left:130px">
+<h3 class="w3-yellow" >Tugas 13 Membuat Navigation</h3>
+<div id="motor" class="w3-container menu" style="display:none">
+<h2>Motor</h2>
+<img src="motor.jpg" class="w3-animate-fading" style="width:75%">
+</div>
+<div id="sepeda" class="w3-container menu" style="display:none"> 
+<h2>Sepeda</h2>
+<img src="sepeda.jpg" class="w3-animate-bottom" style="width:75%">
+</div>
+<div id="kampus" class="w3-container menu" style="display:none"> 
+<h2>Kampus</h2>
+<img src="kampus.jpg" class="w3-animate-top" style="width:75%">
+</div>
+<div id="paul" class="w3-container menu" style="display:none">
+<h2>Paul walker</h2>
+<img src="paul.jpg" class="w3-animate-zoom" style="width:75%">
+</div>
+<div id="profile" class="w3-container menu" style="display:none"> 
+<h2>Profile</h2>
+<p>NIM : 10121211</p>
+<p>Nama : Fauzi Nurfadilah</p>
+<p>Kelas : IF-6</p>
+<img src="profile.jpeg" style="width:75%">
+</div>
+</div> 
+</div>
+
+<script>
+function openmenu(evt, namamenu) 
+{ ``
+var i, x, tablinks;
+x = document.getElementsByClassName("menu"); 
+for (i = 0; i < x.length; i++) 
+{ 
+x[i].style.display = "none"; 
+} 
+tablinks = document.getElementsByClassName("tablink");
+for (i = 0; i < x.length; i++) 
+{
+tablinks[i].className = tablinks[i].className.replace(" w3-green", ""); 
+} 
+document.getElementById(namamenu).style.display = "block";
+evt.currentTarget.className += " w3-green"; 
+} </script>
+</body>
+</html>
